@@ -1,5 +1,5 @@
-﻿using ExerciciosPOO;
-internal class Program {
+﻿using ExerciciosPOO.Questao1;
+/*internal class Program {
     private static void Main(string[] args) {
         Animal[] VetorAnimais = new Animal[20];
         string x;
@@ -20,4 +20,4 @@ internal class Program {
         }
         ;
     }
-}
+}*/
