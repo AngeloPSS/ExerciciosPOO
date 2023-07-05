@@ -1,4 +1,4 @@
-﻿namespace ExerciciosPOO.Questao1
+﻿namespace ExerciciosPOO
 {
     interface IAnimal
     {
@@ -11,7 +11,7 @@
         public string[] ClassificaEspecie(Animal[] completo);
     }
 
-    class Animal : IFerramentas, IAnimal
+    public class Animal : IFerramentas, IAnimal
     {
         public string Especie { get; set; }
         public string Nome { get; set; }
@@ -24,7 +24,7 @@
 
         public Animal[] FiltraEspecie(Animal[] completo, string especieFiltrar)
         {
-            List<Animal> filtrado = new List<Animal>();
+            List<Animal> filtrado = new();
             foreach (Animal animal in completo)
             {
                 if (animal.Especie == especieFiltrar)
@@ -37,7 +37,7 @@
 
         public string[] ClassificaEspecie(Animal[] completo)
         {
-            List<string> listaEspecies = new List<string>();
+            List<string> listaEspecies = new();
             for (int i = 0; i <= completo.Length; i++)
             {
                 if (listaEspecies.Find(x => x == completo[i].Especie) == null)
@@ -50,7 +50,7 @@
 
         public static Resultado[] ContaEspecie(Animal[] animais)
         {
-            List<Resultado> ajuda = new List<Resultado>();
+            List<Resultado> ajuda = new();
             int cont;
 
             foreach (Animal especie in animais)
@@ -60,7 +60,7 @@
                 Resultado contagem = new Resultado(especie.Especie, cont);
                 ajuda.Add(contagem);
             }
-            List<Resultado> resultado = new List<Resultado>();
+            List<Resultado> resultado = new();
 
             Resultado[] auxiliar = ajuda.ToArray();
             foreach (Resultado animal in auxiliar)

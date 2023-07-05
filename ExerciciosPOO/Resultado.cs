@@ -1,4 +1,4 @@
-﻿namespace ExerciciosPOO.Questao1
+﻿namespace ExerciciosPOO
 {
     public class Resultado
     {
